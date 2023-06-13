@@ -7,11 +7,10 @@ terraform {
   }
 }
 
+// Information used to access the AWS account
 provider "aws" {
-  region     = "us-east-1"
-  access_key = "AKIAVQAN5TVLBXYKFMDU"
-  secret_key = "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"
-
-
+  region                   = "us-east-1"
+  shared_config_files      = ["~/.aws/config"]
+  shared_credentials_files = ["~/.aws/credentials"]
 }
 
